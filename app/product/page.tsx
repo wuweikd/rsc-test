@@ -36,7 +36,7 @@ const Product = () => {
       cb: (p) => {
         console.log("cb----");
         console.info(p);
-        // setStore({info: p.data.moreinfo})
+        setStore({info: p.data.moreinfo})
       },
       hiidoUrl: "https://xxxx.xxxx.xxxx/c.gif",
     });
@@ -59,7 +59,7 @@ const Product = () => {
       <button>
         <h4 onClick={getReport}>获取页面性能报告</h4>
       </button>
-      {/*<h5>{store.info}</h5>*/}
+      <h5>{store.info}</h5>
       <MySwiper></MySwiper>
       <MyLoadsh></MyLoadsh>
       <MyJquery></MyJquery>
