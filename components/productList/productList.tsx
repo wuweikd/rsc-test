@@ -2,6 +2,7 @@
 import styles from "./productList.module.css";
 import { productListMockData } from "@/mock/productList";
 import {useState, useEffect} from "react";
+import Link from 'next/link'
 
 async function getDate() {
   return new Promise((resolve) => {
@@ -53,15 +54,15 @@ const ProductList = () => {
 
       <div className={styles.list}>
         {list?.list.map((item: any, index: number) => (
-            <div
+            <Link
+                href={'./product'}
                 key={index}
                 className={styles.item}
-                onClick={() => openDetail()}
             >
               <img height={450} src={item.pic} alt="" width={450}/>
               <div>商品名称：{item.name}</div>
               <div>商品产地：{item.address}</div>
-            </div>
+            </Link>
         ))}
       </div>
     </div>

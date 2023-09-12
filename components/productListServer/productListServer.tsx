@@ -1,5 +1,6 @@
 import styles from "./productList.module.css";
 import { productListMockData } from "@/mock/productList";
+import Link from 'next/link'
 
 async function getDate() {
   return new Promise((resolve) => {
@@ -39,7 +40,7 @@ const ProductListServer = async () => {
     <div className={styles.productList}>
       <div className={styles.list}>
         {list?.list.map((item: any, index: number) => (
-            <a
+            <Link
                 href={'./product'}
                 key={index}
                 className={styles.item}
@@ -47,7 +48,7 @@ const ProductListServer = async () => {
               <img height={450} src={item.pic} alt="" width={450}/>
               <div>商品名称：{item.name}</div>
               <div>商品产地：{item.address}</div>
-            </a>
+            </Link>
         ))}
       </div>
     </div>
