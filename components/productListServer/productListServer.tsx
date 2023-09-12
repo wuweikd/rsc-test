@@ -11,7 +11,6 @@ async function getDate() {
 
 const getDataResource = async () => {
   const res = await getDate();
-  console.log("res--->", res);
   return res;
 }
 
@@ -25,14 +24,12 @@ const ProductListServer = async () => {
 
 
   const openDetail = () => {
-    console.log("xxxxx", (location.href = "/product"));
   }
 
 
 
   const search = async () => {
     const l: any = await getDataResource()
-    console.log('l====', l)
     list = l
   }
 
