@@ -56,8 +56,8 @@ const Product = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>商品详情页</h1>
-      <button>
-        <h4 onClick={getReport}>获取页面性能报告</h4>
+      <button onClick={getReport}>
+        <h4>获取页面性能报告</h4>
       </button>
       <h5>{store.info}</h5>
       <MySwiper></MySwiper>
